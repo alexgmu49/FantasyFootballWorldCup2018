@@ -7,17 +7,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
     <title>Default Page for Fantasy Football World Cup 2018</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javscript" src="FantasyFootball2018Navigation.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">    
+    <link rel="stylesheet" href="FantasyFootball2018Styles.css">    
   </head>
 
   <body>
-
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -30,52 +28,57 @@
           </button>          
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>-->
+          <ul id="list" class="nav navbar-nav">
+            <li><a data-page="home-button" href="#">Home</a></li>
+            <li><a data-page="about-button" href="#">About</a></li>
+            <li><a data-page="contact-button" href="#">Contact</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="./">Login<span class="sr-only">(current)</span></a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
-
-    <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Welcome to Fantasy Football World Cup 2018</h1>
-        <p>This is my first Website just to use among friends.So, please be patient if you find any errors.</p>
-        <p>Will be updating the records to my best of my abilities</p>
-        <!--<p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>-->
-      </div>
-
-    </div> <!-- /container -->
+    
+    <div id="pages">
+        <div id="home-button" class="page" data-page="home-button">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Welcome to Fantasy Football World Cup 2018</h1>
+                    <p>This is my first Website just to use among friends.So, please be patient if you find any errors.</p>
+                    <p>Will be updating the records to best of my abilities</p>                    
+                </div>
+            </div>            
+        </div>
+    
+        <div id="about-button" class="page hide" data-page="about-button">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Rules of Fantasy Football World Cup 2018</h1>
+                    <p>It is pretty simple, predict the result of the match between two teams for all the group matches before the
+                        event starts.</p>
+                    <p>Participant with the maximum correct predictions will win the tournment.</p>                    
+                </div>
+            </div>            
+        </div>
+    
+        <div id="contact-button" class="page hide" data-page="contact-button">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Contact details regarding participation and price money</h1>
+                    <p>Tarun Gankidi.</p>
+                    <p>tarun.gankidi@gmail.com</p>                    
+                </div>
+            </div>            
+        </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->    
   </body>
 </html>
